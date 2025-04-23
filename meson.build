@@ -12,3 +12,11 @@ executable('ssh-tui',
   dependencies : [ncurses_dep],
   install : true
 )
+
+executable('scp-tui',
+  sources: [
+    'scp_tui.c'
+  ],
+  dependencies : [ncurses_dep],
+  install : true
+)
