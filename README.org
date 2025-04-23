@@ -17,47 +17,48 @@ $HOME/.ssh/config
 1. 安装依赖
    本项目依赖 ncurses 库。请根据你的发行版选择对应的安装命令：
 
-   - Debian/Ubuntu：
+- Debian/Ubuntu：
 #+begin_src shell
 sudo apt-get install libncurses-dev
 #+end_src
 
-   - Fedora：
+- Fedora：
 #+begin_src shell
 sudo dnf install ncurses-devel
 #+end_src
 
-   - CentOS/RHEL：
+- CentOS/RHEL：
 #+begin_src shell
 sudo yum install ncurses-devel
 #+end_src
 
-   - Arch Linux/Manjaro：
+- Arch Linux/Manjaro：
 #+begin_src shell
 sudo pacman -S ncurses
 #+end_src
 
-   - openSUSE：
+- openSUSE：
 #+begin_src shell
 sudo zypper install ncurses-devel
 #+end_src
 
 2. 构建项目
 
-   - 使用 Meson 构建（推荐）：
+- 使用 Meson 构建（推荐）：
 #+begin_src shell
 meson setup builddir
 ninja -C builddir
 #+end_src
    这将同时生成 ssh-tui 和 scp-tui 两个可执行文件。
 
-   - 直接使用 gcc 或 clang 构建：
-     使用 gcc：
+- 直接使用 gcc 或 clang 构建：
+
+使用 gcc：
 #+begin_src shell
 gcc -o "ssh-tui" ssh_tui.c -lncurses
 gcc -o "scp-tui" scp_tui.c -lncurses
 #+end_src
-     使用 clang：
+使用 clang：
 #+begin_src shell
 clang -o "ssh-tui" ssh_tui.c -lncurses
 clang -o "scp-tui" scp_tui.c -lncurses
