@@ -1,0 +1,75 @@
+* ssh-tui
+
+一个基于 ncurses 的简单 SSH TUI客户端，使用 C 语言开发，采用 Meson 构建系统。
+
+** 项目简介
+本项目旨在提供一个简洁的 SSH 终端界面，便于在类 Unix 系统下通过终端进行 SSH 连接和操作。
+
+** 构建与安装
+
+1. 安装依赖
+   本项目依赖 ncurses 库。请根据你的发行版选择对应的安装命令：
+
+   - Debian/Ubuntu：
+     #+begin_src shell
+     sudo apt-get install libncurses-dev
+     #+end_src
+
+   - Fedora：
+     #+begin_src shell
+     sudo dnf install ncurses-devel
+     #+end_src
+
+   - CentOS/RHEL：
+     #+begin_src shell
+     sudo yum install ncurses-devel
+     #+end_src
+
+   - Arch Linux/Manjaro：
+     #+begin_src shell
+     sudo pacman -S ncurses
+     #+end_src
+
+   - openSUSE：
+     #+begin_src shell
+     sudo zypper install ncurses-devel
+     #+end_src
+
+2. 构建项目
+
+   - 使用 Meson 构建（推荐）：
+     #+begin_src shell
+     meson setup builddir
+     ninja -C builddir
+     #+end_src
+
+   - 直接使用 gcc 或 clang 构建：
+     使用 gcc：
+     #+begin_src shell
+     gcc -o "ssh-tui" ssh_tui.c -lncurses
+     #+end_src
+     使用 clang：
+     #+begin_src shell
+     clang -o "ssh-tui" ssh_tui.c -lncurses
+     #+end_src
+
+** 运行
+
+- Meson 构建：
+  #+begin_src shell
+  ./builddir/ssh-tui
+  #+end_src
+- gcc/clang 构建：
+  #+begin_src shell
+  ./ssh-tui
+  #+end_src
+
+** 目录结构
+
+- meson.build         :: Meson 构建脚本
+- ssh_tui.c           :: 主程序源代码
+- builddir/           :: 构建输出目录（自动生成）
+
+** 许可证
+
+MIT License
