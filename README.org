@@ -2,6 +2,9 @@
 
 一个基于 ncurses 的简单 SSH/SCP TUI 客户端，使用 C 语言开发，采用 Meson 构建系统。
 
+[[file:./imgs/ssh-tui.png][ssh-tui]]
+[[file:./imgs/scp-tui.png][scp-tui]]
+
 ** 项目简介
 本项目旨在提供简洁的 SSH 终端界面（ssh-tui）和 SCP 文件传输界面（scp-tui），便于在类 Unix 系统下通过终端进行 SSH 连接和文件传输操作。
 
